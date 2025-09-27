@@ -5,30 +5,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Manager</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body style = "background-color: cyan;">
     <div class = "container">
-        <h1>My Passwords</h1>
+        <h1 style = "text-align: center;">My Passwords</h1>
 
         <!--Create fields for user to store passwords and usernames-->
-        <div class = "form">
+        <div class = "form" id = "passwordForm">
             <input type = "text" id = "title" placeholder="Website/title"/>
             <input type = "text" id = "username" placeholder = "Username"/>
             <input type = "password" id = "password" placeholder="Password"/>
-
-            <button id = "addPassword">Add</button>
             <br>
+            <button id = "addPassword">Add</button>
             <button id = "displayPasswords" onclick="displayPasswords()">Display Passwords</button>
             <p id = "blankField" class = "error"></p>
         </div>
 
-        <h2>Stored Passwords</h2>
+        <h2 style = "text-align: center;">Stored Passwords</h2>
+        <button style = "margin: 0 auto; display: block;" onClick = "logout()">Logout</button>
         <div id = "passwordList"></div>
 
         
-        <button onClick = "logout()">Logout</button>
     </div>
 
     <script src="script.js"></script>

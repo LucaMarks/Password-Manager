@@ -1,0 +1,30 @@
+#loginContainer {
+            text-align: center;
+            background-color: lightcyan;
+            padding: 20px;
+            border: 2px solid;
+            border-color: black;
+            border-radius: 10px;
+            width: 300px;
+            margin: auto;
+            margin-top : 10%;
+        }
+#passwordForm {
+    text-align: center;
+    background-color: lightcyan;
+    padding: 20px;
+    border: 2px solid;
+    border-color: black;
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+}
+#passwordList {
+    text-align: center;
+    margin-top: 20px;
+    border: 2px solid;
+    border-color: black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: lightyellow;
+}

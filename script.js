@@ -15,6 +15,10 @@ function login(){
 
 let loginButton = document.getElementById("loginButton");
 
+//use event listener to trigger add password function
+document.getElementById("addPassword").addEventListener("click", addPassword);
+
+
 //wait for user to press login button
 //run login sequence when user clicks login button
 // loginButton.addEventListener("click", login());
@@ -45,7 +49,6 @@ function addPassword(){
     password = "";
 }
 
-document.getElementById("addPassword").addEventListener("click", addPassword);
 
 function displayPasswords(){
 
@@ -63,6 +66,7 @@ function displayPasswords(){
 
     let html = "";
 
+    //display passwords by iterating through password list
     for (let i = 0; i < passwordList.length; i++) {
         let item = passwordList[i];
         html += `
