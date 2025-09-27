@@ -8,6 +8,8 @@ function login(){
     if(password == master){
         //open dashboard
         window.location.href = "dashboard.html";
+        //hide the passwordList display until we add a password or display passwords
+        document.getElementById("passwordList").style.display = "none";
 
     }else{document.getElementById("error").innerText = "Incorrect Password!";}
 
@@ -24,6 +26,10 @@ document.getElementById("addPassword").addEventListener("click", addPassword);
 // loginButton.addEventListener("click", login());
 
 function addPassword(){
+    
+    //show passwordDisplayList div
+    document.getElementById("passwordList").style.display = "block";
+
     const title = document.getElementById("title").value;
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
@@ -53,6 +59,7 @@ function addPassword(){
 function displayPasswords(){
 
     const passwordListDisplay = document.getElementById("passwordList");
+    passwordListDisplay.style.display = "block";
 
     //try to retrieve passwords from localStorage, otherwise take an empty list
     let passwordList = JSON.parse(localStorage.getItem("passwords")) || [];
